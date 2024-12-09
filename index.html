@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мое Портфолио</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Убираем подчеркивание у всех ссылок */
+        a {
+            text-decoration: none; /* Убираем подчеркивание */
+        }
+        body {
+            background-color: #000; /* Черный фон для всего тела */
+            color: #fff; /* Белый текст */
+            font-family: Arial, sans-serif; /* Шрифт */
+        }
+        header {
+            background-color: #333; /* Темно-серый фон для заголовка */
+            padding: 20px; /* Отступы */
+            text-align: center; /* Центрирование текста */
+        }
+        nav ul {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем отступы */
+        }
+        nav ul li {
+            display: inline; /* Отображение элементов в строку */
+            margin: 0 15px; /* Отступы между элементами */
+        }
+        section {
+            padding: 20px; /* Отступы для секций */
+        }
+        .social-icons {
+            margin-top: 10px; /* Отступ сверху для иконок */
+        }
+        .social-icon {
+            color: black; /* Черный цвет иконок */
+            margin: 0 5px; /* Отступы между иконками */
+            font-size: 24px; /* Размер иконок */
+        }
+        .social-icon:hover {
+            color: #ccc; /* Цвет иконок при наведении */
+        }
+        footer {
+            text-align: center; /* Центрирование текста в футере */
+            padding: 10px; /* Отступы */
+            background-color: #333; /* Темно-серый фон для футера */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Сотников Богдан</h1>
+            <p>Студент</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">О себе</a></li>
+                    <li><a href="#projects">Проекты</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>О себе</h2>
+            <div class="about-content">
+                <div class="profile">
+                    <img src="your-photo.jpg" alt="Ваша фотография" class="profile-photo">
+                </div>
+                <div class="about-text">
+                    <p>Я - Сотников Богдан, студент(ученик 10-класса) с маленьким опытом работы в Web-разработке. В свободное время я увлекаюсь видеоиграми и просмотром фильмов в основном биография, приключения.</p>
+                    <h3>Контакты</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/mehiix" class="social-icon" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="https://discord.com/users/kiqueen" class="social-icon" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="mailto:hitbogo@gmail.com" class="social-icon" title="Gmail"><i class="fas fa-envelope"></i></a>
+                        <a href="https://steamcommunity.com/id/VitalyGrachev/" class="social-icon" title="Steam"><i class="fab fa-steam"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="container">
+            <h2>Проекты</h2>
+            <div class="project">
+                <h3><a href="calculator.html">Калькулятор</a></h3>
+                <p>Создан простой калькулятор на Python, который выполняет основные арифметические операции.</p>
+            </div>
+            <div class="project">
+                <h3><a href="password-generator.html">Генератор паролей</a></h3>
+                <p>Разработан генератор паролей, который создает безопасные пароли с использованием различных символов.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Сотников Богдан. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <style>
+        body {
+            background-color: #000; /* Черный фон для всего тела */
+            color: #fff; /* Белый текст по умолчанию */
+            font-family: Arial, sans-serif; /* Шрифт */
+            text-align: center; /* Центрирование текста */
+        }
+        header {
+            background-color: #333; /* Темно-серый фон для заголовка */
+            color: white; /* Белый текст */
+            padding: 10px 0; /* Отступы */
+        }
+        .calculator {
+            width: 220px;
+            margin: 20px auto; /* Центрирование калькулятора */
+            text-align: center;
+            background-color: #222; /* Темно-серый фон для калькулятора */
+            border: 2px solid #fff; /* Белая рамка */
+            border-radius: 10px; /* Закругленные углы */
+            padding: 10px; /* Отступы */
+        }
+        #display {
+            width: 100%;
+            height: 40px;
+            font-size: 24px;
+            margin-bottom: 10px;
+            background-color: #fff; /* Белый фон для строки ввода */
+            color: #000; /* Черный текст для строки ввода */
+            border: none; /* Убираем рамку */
+            text-align: right; /* Выравнивание текста вправо */
+            padding: 5px; /* Отступы внутри строки ввода */
+            border-radius: 5px; /* Закругленные углы для строки ввода */
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        button {
+            width: 100%;
+            height: 40px;
+            font-size: 18px;
+            background-color: #444; /* Темно-серый фон для кнопок */
+            color: #fff; /* Белый текст для кнопок */
+            border: 1px solid #fff; /* Белая рамка для кнопок */
+            border-radius: 5px; /* Закругленные углы для кнопок */
+            cursor: pointer; /* Курсор в виде указателя при наведении */
+        }
+        button:hover {
+            background-color: #666; /* Светлее при наведении */
+        }
+        .back-button {
+            display: inline-block; /* Отображение как блочный элемент */
+            background-color: #444; /* Темно-серый фон для кнопки "Назад" */
+            color: white; /* Белый текст */
+            padding: 10px 20px; /* Отступы */
+            text-decoration: none; /* Убираем подчеркивание */
+            border-radius: 5px; /* Закругленные углы */
+            margin-top: 20px; /* Отступ сверху */
+        }
+        .back-button:hover {
+            background-color: #666; /* Светлее при наведении */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>КАЛЬКУЛЯТОР</h1>
+    </header>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="button-grid">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="calculateResult()">=</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+                        <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('0')">0</button>
+        </div>
+    </div>
+
+    <a href="index.html" class="back-button">Назад к портфолио</a> <!-- Кнопка "Назад" -->
+
+    <script>
+        function appendToDisplay(value) {
+            const display = document.getElementById('display');
+            display.value += value;
+        }
+
+        function clearDisplay() {
+            const display = document.getElementById('display');
+            display.value = '';
+        }
+
+        function calculateResult() {
+            const display = document.getElementById('display');
+            try {
+                display.value = eval(display.value);
+            } catch (error) {
+                display.value = 'Ошибка';
+            }
+        }
+    </script>
+</body>
+</html>
+
